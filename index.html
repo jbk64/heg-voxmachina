@@ -1,35 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="styles.css">
+    <title>Vox Machina</title>
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                <div class="jumbotron">
-                    <h1 class="display-4">Démonstration d'interface vocale</h1>
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Générez le texte avec votre voix.</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                    </form>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Enregistrer</a>
-                </div>
-            </div>
+    <div id="commands" class="jumbotron jumbotron-fluid mb-0">
+        <div class="container">
+            <h1 class="display-5">Commandes</h1>
+            <p class="lead">Ceci est un prototype d'interaction par commandes vocales dans une page web. Cette page web fait des appels HTTP vers l'API de Cowaboo et reçoit des informations citées dans notre présentation sur les interfaces vocales.</p>
+            <p class="lead">Naviguez dans la page à l'aide des commandes vocales suivantes:</p>
+            <br>
+            <h3 class="display-6"><code>histoire</code></h3>
+            <h3 class="display-6"><code>assistant</code></h3>
+            <h3 class="display-6"><code>exemples</code></h3>
+            <h3 class="display-6"><code>référence</code></h3>
         </div>
     </div>
 
+    <br>
+    <br>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <div id="introduction"  class="container">
+        <h1 class="display-5">Interfaces vocales</h1>
+        <br>
+        <p class="lead">Une interface vocale est une interface d'entrée d'un système informatique permettant l'interaction par la voix.</p>
+        <p class="lead">Les interfaces vocales sont aujourd'hui intégrées dans les systèmes d'exploitations, les véhicules, les systèmes domotiques et bien d'autres types d'objets.</p>
+        <p class="lead">La popularité des assistants vocaux intégrés dans les OS mobiles des grandes entreprises numériques a encouragé l'adoption de ce mode d'interaction.</p>
+    </div>
+
+    <div id="histoire" class="container" style="display: none">
+        <h1 class="display-5">Histoire</h1>
+        <br>
+        <p class="lead">Les interfaces par commandes vocales reposent sur des technologies de reconnaissance vocale.</p>
+        <p class="lead">La reconnaissance vocale fait partie du champ interdisciplinaire de la linguistique informatique. Les premières recherches dans ce sujet datent de la fin des années 1950.</p>
+        <p class="lead">En 1962, IBM démontre les capacités d'une machine permettant de distinguer 16 mots différents et executer une fonction correspondantes.</p>
+        <p class="lead">Au fil des années, des progrès ont été réalisés dans la taille du vocabulaire et la rapidité de traitement de ces machines. Au milieu des années 1980, une équipe d'IBM créé une machine à écrire capable de comprendre un vocabulaire de 20'000 mots à l'aide de modèles statistiques.</p>
+        <p class="lead">Dans les années 1990, la croissance des capacités de calcul des machines a permis la création de machines capables de comprendre un vocabulaire plus vaste que le vocabulaire d'un humain.</p>
+        <p class="lead">La reconnaissance vocale en continu sur un vocabulaire étendu a longtemps été vu une étape importante dans la recherche. Cette étape est franchie par le système CMU Sphinx, développé par Xuedong Huang. Cette machine utilise des algorithmes et modèles avancés de reconnaissance vocale.</p>
+        <p class="lead">Depuis, beaucoup d'aspects de la reconnaissance vocale sont pris en charge par des techniques de deep learning.</p>
+    </div>
+
+    <div id="assistant" class="container" style="display: none">
+        <h1 class="display-5">Assistants vocaux</h1>
+        <br>
+        <p class="lead">Ceci est un prototype d'interaction par commandes vocales dans une page web. Une interface vocale est une interface d'entrée d'un système informatique permettant l'interaction par la voix.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Assistants personnels</th>
+                </tr>
+            </thead>
+            <tbody id="table-assistants">
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="exemples" class="container" style="display: none">
+        <h1 class="display-5">Exemples</h1>
+        <br>
+        <p class="lead">Il existe aujourd'hui de nombreuses technologies web permettant de faire de la reconnaissance vocale.</p>
+        <table>
+            <tbody id="table-web"></tbody>
+        </table>
+    </div>
+
+    <div id="sources" class="container" style="display: none">
+        <h1 class="display-5">Références</h1>
+        <br>
+        <p class="lead">Ceci est un prototype d'interaction par commandes vocales dans une page web. Une interface vocale est une interface d'entrée d'un système informatique permettant l'interaction par la voix.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="voxmachina.js"></script>
+    <script src="commandes.js"></script>
+    <script src="cowaboo.js"></script>
 </body>
 </html>
