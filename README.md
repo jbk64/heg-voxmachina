@@ -2,8 +2,8 @@
 
 Ce projet est un prototype d'interface vocale dans le cadre d'une webapp simple.
 
-La navigation est activée par la parole.
+La navigation dans la page web est activée par la parole. Pour tester, il faut un microphone et de préférence utiliser le navigateur Chrome.
 
-## Installation
+Important: il faut activer les scripts et la permission d'utiliser le micro dans votre navigateur. Pour cela, clicker sur les icônes suivantes:
 
-## Utilisation
+![alt text](https://i.imgur.com/etahW3c.jpg "Instructions")
