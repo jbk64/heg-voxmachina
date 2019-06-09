@@ -5,45 +5,28 @@ if (annyang) {
             $("#introduction").show();
             $("#histoire").hide();
             $("#assistant").hide();
-            $("#exemples").hide();
-            $("#sources").hide();
-
+            $("#references").hide();
         },
         'histoire': function() {
             console.log('histoire');
             $("#introduction").hide();
             $("#histoire").show();
             $("#assistant").hide();
-            $("#exemples").hide();
-            $("#sources").hide();
-
+            $("#references").hide();
         },
         'assistant': function() {
             console.log('assistant');
             $("#introduction").hide();
             $("#histoire").hide();
             $("#assistant").show();
-            $("#exemples").hide();
-            $("#sources").hide();
-
-        },
-        'exemples': function() {
-            console.log('exemples');
-            $("#introduction").hide();
-            $("#histoire").hide();
-            $("#assistant").hide();
-            $("#exemples").show();
-            $("#sources").hide();
-
+            $("#references").hide();
         },
         'référence': function() {
             console.log('référence');
             $("#introduction").hide();
             $("#histoire").hide();
             $("#assistant").hide();
-            $("#exemples").hide();
-            $("#sources").show();
-
+            $("#references").show();
         }
     };
 
